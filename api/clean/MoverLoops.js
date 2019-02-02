@@ -1,10 +1,11 @@
 const cleanProps = require('../casing/movers')
 
 /**
- * Cleans the MoverMapShape response
+ * Cleans the MoverMapShapeLoops response
  * @param {{RecordSet}} jsonObj JSON object after converting the response from XML
+ * @returns {string[]} An array of Loop IDs as strings
  */
-const MoverMapShape = (jsonObj) => {
+const MoverMapShapeLoops = (jsonObj) => {
   const { RecordSet } = jsonObj
   const noRecords = RecordSet.Record == null ||
     RecordSet === '' ||
@@ -14,24 +15,18 @@ const MoverMapShape = (jsonObj) => {
   // No records
   if (noRecords) return []
 
-  const records = RecordSet.Record
-  // map reduce all records to return unique loop IDs
-  const loopIDs = records.map(o => o.LoopID).filter((nm, i, arr) => arr.indexOf(nm) === i)
+  let loopos = []
+  if (Array.isArray(RecordSet.Record) === false) {
+    // Record is a hashtable, not array
+    loopos.push(RecordSet.Record)
+  } else {
+    // there's an array of records
+    loopos = RecordSet.Record
+  }
 
-  // Creates an array of { id: 'BKL', points: [] } for each loop ID
-  // and stores it in the `loops` variable
-  const loops = loopIDs.map(id => ({
-    id, points: []
-  }))
+  const loopIDs = loopos.map(o => cleanProps.object(o).id)
 
-  records.forEach(record => {
-    const rc = cleanProps.object(record)
-    const { id } = rc
-    delete rc.id; delete rc.OrderNum
-    loops[loopIDs.indexOf(id)].points.push(rc)
-  })
-
-  return loops
+  return loopIDs
 }
 
-module.exports = MoverMapShape
+module.exports = MoverMapShapeLoops
