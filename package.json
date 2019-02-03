@@ -5,12 +5,13 @@
   "description": "Simplifies messy, poorly structured data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "updateconfig": "npm i cscape/wayline-config"
   },
   "keywords": [],
   "author": "Cyberscape <info@cyberscape.co>",
   "license": "MIT",
   "dependencies": {
+    "@wayline/config": "github:cscape/wayline-config",
     "axios": "^0.18.0",
     "fast-xml-parser": "^3.12.12"
   }
