@@ -1,9 +1,9 @@
 {
   "name": "@wayline/transformer",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.9",
   "description": "Simplifies messy, poorly structured data",
-  "main": "index.js",
+  "main": "module.js",
   "scripts": {
     "updateconfig": "npm i cscape/wayline-config"
   },
