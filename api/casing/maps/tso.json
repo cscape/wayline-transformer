@@ -1,0 +1,8 @@
+{
+  "ID": "id",
+  "Name": "name",
+  "LineColor": "color",
+  "RoutePath": "path",
+  "StopIcon": "stop_icon",
+  "UnitIcon": "unit_icon"
+}
