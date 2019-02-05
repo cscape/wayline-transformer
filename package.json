@@ -7,9 +7,20 @@
   "scripts": {
     "updateconfig": "npm i cscape/wayline-config"
   },
-  "keywords": [],
+  "keywords": [
+    "wayline",
+    "transit"
+  ],
   "author": "Cyberscape <info@cyberscape.co>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cscape/wayline-transformer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cscape/wayline-transformer.git"
+  },
+  "homepage": "https://github.com/cscape/wayline-transformer#readme",
   "dependencies": {
     "@wayline/config": "github:cscape/wayline-config",
     "axios": "^0.18.0",
