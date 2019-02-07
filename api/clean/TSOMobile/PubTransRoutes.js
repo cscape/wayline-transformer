@@ -8,8 +8,9 @@ const colors = require('../../util/colors')
  */
 const PubTransRoutes = (jsonArr) => {
   let arr = jsonArr
-    .map(o => ({ ...o, UnitIcon: `https://publictransportation.tsomobile.com/images/mapIcons/${o.UnitIcon}` }))
-    .map(o => ({ ...o, StopIcon: `https://publictransportation.tsomobile.com/images/mapIcons/${o.StopIcon}` }))
+    // .map(o => ({ ...o, UnitIcon: `https://publictransportation.tsomobile.com/images/mapIcons/${o.UnitIcon}` }))
+    // .map(o => ({ ...o, StopIcon: `https://publictransportation.tsomobile.com/images/mapIcons/${o.StopIcon}` }))
+    .map(o => { delete o.UnitIcon; delete o.StopIcon; return o })
     .map(o => ({
       ...o,
       LineColor: colors.hexToRgb(o.LineColor.replace(/#/g, ''))
