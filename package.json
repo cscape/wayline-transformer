@@ -21,9 +21,11 @@
     "url": "git+https://github.com/cscape/wayline-transformer.git"
   },
   "homepage": "https://github.com/cscape/wayline-transformer#readme",
-  "dependencies": {
+  "devDependencies": {
     "@wayline/config": "github:cscape/wayline-config",
-    "axios": "^0.18.0",
+    "axios": "^0.18.0"
+  },
+  "dependencies": {
     "fast-xml-parser": "^3.12.12"
   }
 }
