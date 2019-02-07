@@ -4,5 +4,7 @@
   "LineColor": "color",
   "RoutePath": "path",
   "StopIcon": "stop_icon",
-  "UnitIcon": "unit_icon"
+  "UnitIcon": "unit_icon",
+  "Type": "type",
+  "News": "news"
 }
