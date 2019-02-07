@@ -4,9 +4,21 @@ JavaScript library that cleans up dirty transit data. This is **not** published 
 
 ## Install
 
-This package can be installed as a Node.js dependency by specifying `"@wayline/transformer": "github:cscape/wayline-transformer"` in your package.json file and installing packages as usual.
+This package can be installed as a Node.js dependency by specifying `@wayline/transformer` in your package.json file and installing packages as usual.
+
+```json
+{
+  "dependencies": {
+    "@wayline/transformer": "github:cscape/wayline-transformer"
+  }
+}
+```
 
 ## Examples
+
+### Data Transformers/Normalizers
+
+Sample code for all transformer methods is located in the [`tests/`](tests) folder
 
 ### Utility Methods
 
