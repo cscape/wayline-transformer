@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
+// Gets array of all directories within a specified path
 const getDirectories = path => fs
   .readdirSync(path)
   .filter(file => fs
@@ -30,7 +31,8 @@ const _utils = fs
 _utils.forEach(f => (utils[f] = require(`./api/util/${f}.js`)))
 
 /**
- * Mapped prototype of cleaner APIs
+ * Mapped prototype of cleaner APIs, named and structured
+ * according to the /api folder structure
  */
 module.exports = {
   ...mapped,
