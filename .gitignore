@@ -4,15 +4,10 @@ node_modules
 
 .vscode
 .DS_Store
-.lock-wscript
-pids
 logs
 
 # Files
 
 .env
 *.log
-*.pid
-*.seed
 *.DS_Store
-.servers*.json
