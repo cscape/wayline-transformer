@@ -6,5 +6,11 @@
   "StopIcon": "stop_icon",
   "UnitIcon": "unit_icon",
   "Type": "type",
-  "News": "news"
+  "News": "news",
+  "Latitude": "lat",
+  "Longitude": "long",
+  "RouteID": "route_id",
+  "StopNumber": "stop_number",
+  "Distance": "distance",
+  "Description": "description"
 }
