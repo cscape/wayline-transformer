@@ -12,5 +12,8 @@
   "RouteID": "route_id",
   "StopNumber": "stop_number",
   "Distance": "distance",
-  "Description": "description"
+  "Description": "description",
+  "Hea": "bearing",
+  "Lat": "lat",
+  "Lng": "long"
 }
