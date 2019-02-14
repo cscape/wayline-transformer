@@ -1,6 +1,6 @@
 const axios = require('axios')
 const xml2json = require('../api/util/xml2json')
-const cleaner = require('../api/clean/MoverTracker')
+const cleaner = require('../api/clean/MiamiDadeTransit/MoverTracker')
 const WaylineConfig = require('@wayline/config')
 
 const TransitXMLFeed = WaylineConfig.basefeeds.MiamiDadeTransit
