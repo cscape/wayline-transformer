@@ -5,6 +5,8 @@
   "description": "Simplifies messy, poorly structured data",
   "main": "module.js",
   "scripts": {
+    "build": "node build.js",
+    "precommit": "node build.js",
     "updateconfig": "npm i cscape/wayline-config"
   },
   "keywords": [

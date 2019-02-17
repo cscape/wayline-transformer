@@ -14,6 +14,10 @@ This package can be installed as a Node.js dependency by specifying `@wayline/tr
 }
 ```
 
+## Development
+
+If adding new APIs or changing folder/file structure, run the build command with `npm run build` or `node build.js` to generate a new module.js export.
+
 ## Examples
 
 ### Data Transformers/Normalizers
