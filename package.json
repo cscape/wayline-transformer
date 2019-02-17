@@ -25,9 +25,8 @@
   "homepage": "https://github.com/cscape/wayline-transformer#readme",
   "devDependencies": {
     "@wayline/config": "github:cscape/wayline-config",
-    "axios": "^0.18.0"
-  },
-  "dependencies": {
+    "axios": "^0.18.0",
     "fast-xml-parser": "^3.12.12"
-  }
+  },
+  "dependencies": {}
 }
