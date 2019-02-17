@@ -1,40 +1,24 @@
-const fs = require('fs')
-const path = require('path')
+// THIS IS AN AUTO-GENERATED FILE, DO NOT MANUALLY MODIFY
 
-// Gets array of all directories within a specified path
-const getDirectories = path => fs
-  .readdirSync(path)
-  .filter(file => fs
-    .statSync(`${path}/${file}`)
-    .isDirectory()
-  )
-
-const listing = getDirectories(path.resolve(__dirname, './api/clean'))
-
-let mapped = {}
-listing.forEach(apiType => {
-  mapped[apiType] = {}
-  const cleaners = fs
-    .readdirSync(path.resolve(__dirname, `./api/clean/${apiType}`), 'utf8')
-    .filter(f => f.indexOf('.js') === f.length - 3) // only files with .js extension
-    .map(f => f.slice(0, f.length - 3))
-
-  cleaners.forEach(f => (mapped[apiType][f] = require(`./api/clean/${apiType}/${f}.js`)))
-})
-
-let utils = {}
-const _utils = fs
-  .readdirSync(path.resolve(__dirname, `./api/util/`), 'utf8')
-  .filter(f => f.indexOf('.js') === f.length - 3) // only files with .js extension
-  .map(f => f.slice(0, f.length - 3))
-
-_utils.forEach(f => (utils[f] = require(`./api/util/${f}.js`)))
-
-/**
- * Mapped prototype of cleaner APIs, named and structured
- * according to the /api folder structure
- */
 module.exports = {
-  ...mapped,
-  utils
+  'Brightline': {
+  },
+  'ETATransit': {
+  },
+  'MiamiDadeTransit': {
+    'MoverLoops': require('./api/clean/MiamiDadeTransit/MoverLoops.js'),
+    'MoverShape': require('./api/clean/MiamiDadeTransit/MoverShape.js'),
+    'MoverTracker': require('./api/clean/MiamiDadeTransit/MoverTracker.js')
+  },
+  'TSOMobile': {
+    'PubTransLocations': require('./api/clean/TSOMobile/PubTransLocations.js'),
+    'PubTransNearby': require('./api/clean/TSOMobile/PubTransNearby.js'),
+    'PubTransNews': require('./api/clean/TSOMobile/PubTransNews.js'),
+    'PubTransRoutes': require('./api/clean/TSOMobile/PubTransRoutes.js'),
+    'PubTransRouteStops': require('./api/clean/TSOMobile/PubTransRouteStops.js')
+  },
+  'utils': {
+    'colors': require('./api/util/colors.js'),
+    'xml2json': require('./api/util/xml2json.js')
+  }
 }
