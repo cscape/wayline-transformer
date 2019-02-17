@@ -1,7 +1,7 @@
 {
   "name": "@wayline/transformer",
   "private": true,
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "Simplifies messy, poorly structured data",
   "main": "module.js",
   "scripts": {
@@ -25,8 +25,9 @@
   "homepage": "https://github.com/cscape/wayline-transformer#readme",
   "devDependencies": {
     "@wayline/config": "github:cscape/wayline-config",
-    "axios": "^0.18.0",
-    "fast-xml-parser": "^3.12.12"
+    "axios": "^0.18.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "fast-xml-parser": "^3.12.12"
+  }
 }
