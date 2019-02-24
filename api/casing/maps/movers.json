@@ -12,5 +12,5 @@
   "Train": "car",
   "Running": "is_running",
   "Latitude": "lat",
-  "Longitude": "long"
+  "Longitude": "lng"
 }
