@@ -7,9 +7,7 @@ const colors = require('../../util/colors')
  * @returns {{}[]} An array of route objects
  */
 const PubTransRoutes = (jsonArr) => {
-  let arr = jsonArr
-    // .map(o => ({ ...o, UnitIcon: `https://publictransportation.tsomobile.com/images/mapIcons/${o.UnitIcon}` }))
-    // .map(o => ({ ...o, StopIcon: `https://publictransportation.tsomobile.com/images/mapIcons/${o.StopIcon}` }))
+  const arr = jsonArr
     .map(o => { delete o.UnitIcon; delete o.StopIcon; return o })
     .map(o => ({
       ...o,
