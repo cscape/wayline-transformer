@@ -7,5 +7,6 @@
   "scheduleNumber": "schedule_id",
   "vehicleType": "vehicle_type",
   "trainID": "train_id",
-  "receiveTime": "timestamp"
+  "receiveTime": "timestamp",
+  "announcements": "alerts"
 }
