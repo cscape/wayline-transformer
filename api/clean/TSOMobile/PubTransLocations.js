@@ -5,8 +5,8 @@ const cleanProps = require('../../casing/tso')
  * @param {{}[]} jsonArr JSON array after converting the parsed response
  * @returns {{}[]} An array of locations /bus objects
  */
-const PubTransLocations = (jsonArr) => {
-  let arr = jsonArr
+const PubTransLocations = jsonArr => {
+  const arr = jsonArr
     .map(o => ({
       ...o,
       timestamp: Number(o.Tim) * 1000,
