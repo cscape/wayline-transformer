@@ -1,3 +1,11 @@
 {
-  "routeID": "route_id"
+  "routeID": "route_id",
+  "patternID": "pattern_id",
+  "equipmentID": "id",
+  "lat": "lat",
+  "long": "lng",
+  "scheduleNumber": "schedule_id",
+  "vehicleType": "vehicle_type",
+  "trainID": "train_id",
+  "receiveTime": "timestamp"
 }
