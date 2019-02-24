@@ -4,6 +4,8 @@ module.exports = {
   'Brightline': {
   },
   'ETATransit': {
+    'Alerts': require('./api/clean/ETATransit/Alerts.js'),
+    'Vehicles': require('./api/clean/ETATransit/Vehicles.js')
   },
   'MiamiDadeTransit': {
     'MoverLoops': require('./api/clean/MiamiDadeTransit/MoverLoops.js'),
