@@ -7,7 +7,6 @@ const cleanProps = require('../../casing/tso')
  */
 const PubTransRouteStopsUnits = (jsonArr) => {
   const arr = jsonArr[0] // arr[1] contains realtime bus data, not needed
-
     .map(i => { delete i.Icon; i.stop_id = i.ID; delete i.ID; return i })
     .map(i => cleanProps.object(i))
 
