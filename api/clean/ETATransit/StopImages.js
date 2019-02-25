@@ -13,7 +13,7 @@ const FormatObject = jsonObj => {
   const obj = jsonObj
     .get_stopimages
     .map(o => {
-      o.images = o.images.filter(a => a !== '')
+      o.images = o.images.filter(a => a !== '' && a != null)
       removeProps.forEach(a => delete o[a])
       return o
     })
