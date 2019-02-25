@@ -10,5 +10,6 @@
   "trainID": "train_id",
   "receiveTime": "timestamp",
   "announcements": "alerts",
-  "encLine": "polyline"
+  "encLine": "polyline",
+  "length": "miles"
 }
