@@ -15,6 +15,8 @@ const FormatArray = jsonArr => {
     .map(o => {
       o.stop_id = o.ID
       o.color = colors.hexToRgb(o.RouteColor)
+      o.Latitude = Number(o.Latitude)
+      o.Longitude = Number(o.Longitude)
       removeProps.forEach(a => delete o[a])
       return o
     })
