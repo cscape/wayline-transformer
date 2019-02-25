@@ -18,6 +18,7 @@ const FormatObject = jsonObj => {
       return o
     })
     .map(o => cleanProps.object(o))
+    .sort((a, b) => a.stop_id - b.stop_id)
 
   return obj
 }
