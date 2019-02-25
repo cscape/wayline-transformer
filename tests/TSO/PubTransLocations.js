@@ -7,7 +7,7 @@ const TransitXMLFeed = WaylineConfig.basefeeds.TSOMobile
 axios.get(`${TransitXMLFeed}PubTrans/GetModuleInfoPublic`, {
   params: {
     Key: 'UNITS_LOCATION_ROUTE',
-    id: 92089,
+    id: 72486,
     lan: 'en'
   }
 }).then(function (response) {
