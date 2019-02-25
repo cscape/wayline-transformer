@@ -11,6 +11,9 @@ module.exports = {
     'Stops': require('./api/clean/ETATransit/Stops.js'),
     'Vehicles': require('./api/clean/ETATransit/Vehicles.js')
   },
+  'MiamiDadeGIS': {
+    'BusRoutes': require('./api/clean/MiamiDadeGIS/BusRoutes.js')
+  },
   'MiamiDadeTransit': {
     'MoverLoops': require('./api/clean/MiamiDadeTransit/MoverLoops.js'),
     'MoverShape': require('./api/clean/MiamiDadeTransit/MoverShape.js'),
@@ -26,7 +29,9 @@ module.exports = {
   },
   'utils': {
     'colors': require('./api/util/colors.js'),
+    'flatmap': require('./api/util/flatmap.js'),
     'polyline': require('./api/util/polyline.js'),
+    'titlecase': require('./api/util/titlecase.js'),
     'xml2json': require('./api/util/xml2json.js')
   }
 }
