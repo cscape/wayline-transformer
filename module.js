@@ -5,7 +5,10 @@ module.exports = {
   },
   'ETATransit': {
     'Alerts': require('./api/clean/ETATransit/Alerts.js'),
+    'Patterns': require('./api/clean/ETATransit/Patterns.js'),
     'Routes': require('./api/clean/ETATransit/Routes.js'),
+    'StopImages': require('./api/clean/ETATransit/StopImages.js'),
+    'Stops': require('./api/clean/ETATransit/Stops.js'),
     'Vehicles': require('./api/clean/ETATransit/Vehicles.js')
   },
   'MiamiDadeTransit': {
@@ -18,7 +21,8 @@ module.exports = {
     'PubTransNearby': require('./api/clean/TSOMobile/PubTransNearby.js'),
     'PubTransNews': require('./api/clean/TSOMobile/PubTransNews.js'),
     'PubTransRoutes': require('./api/clean/TSOMobile/PubTransRoutes.js'),
-    'PubTransRouteStops': require('./api/clean/TSOMobile/PubTransRouteStops.js')
+    'PubTransRouteStops': require('./api/clean/TSOMobile/PubTransRouteStops.js'),
+    'PubTransStopInfo': require('./api/clean/TSOMobile/PubTransStopInfo.js')
   },
   'utils': {
     'colors': require('./api/util/colors.js'),
