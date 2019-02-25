@@ -1,4 +1,5 @@
 const cleanProps = require('../../casing/movers')
+const { encode } = require('../../util/polyline')
 
 /**
  * Cleans the MoverMapShape response
@@ -21,14 +22,20 @@ const MoverMapShape = (jsonObj) => {
   // Creates an array of { id: 'BKL', points: [] } for each loop ID
   // and stores it in the `loops` variable
   const loops = loopIDs.map(id => ({
-    id, points: []
+    id, points: [], polyline: ''
   }))
 
   records.forEach(record => {
     const rc = cleanProps.object(record)
     const { id } = rc
     delete rc.id; delete rc.OrderNum
-    loops[loopIDs.indexOf(id)].points.push(rc)
+    loops[loopIDs.indexOf(id)].points.push(Object.values(rc))
+  })
+
+  loops.forEach(loop => {
+    loop.polyline = encode(loop.points)
+    delete loop.points
+    return loop
   })
 
   return loops
