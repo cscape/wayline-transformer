@@ -11,14 +11,14 @@ const removeProps = [
  * @returns {{}[]} Stop object
  */
 const FormatArray = jsonArr => {
-  const arr = jsonArr[0][0]
+  const arr = jsonArr[0]
     .map(o => {
       o.stop_id = o.ID
       o.color = colors.hexToRgb(o.RouteColor)
       removeProps.forEach(a => delete o[a])
       return o
     })
-    .map(o => cleanProps.object(o))
+    .map(o => cleanProps.object(o))[0]
 
   return arr
 }
