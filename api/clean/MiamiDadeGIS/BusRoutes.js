@@ -1,6 +1,8 @@
 const cleanProps = require('../../casing/mdt-gis')
 const flatmap = require('../../util/flatmap')
 const { encode } = require('../../util/polyline')
+const TitleCase = require('../../util/titlecase')
+const deAbbr = require('../../casing/abbrs/mdt-gis')
 
 /**
  * Cleans the BusRoutes_gdb response from the MDT-GIS FeatureServer
@@ -12,9 +14,10 @@ const FormatObj = jsonObj => {
     .features
     .map(o => {
       const attr = cleanProps.object(o.attributes)
-      const coordsFlatmap = flatmap(o.geometry.paths)
-      const polyline = encode(coordsFlatmap)
-      return { ...attr, polyline }
+      attr.name = TitleCase(deAbbr(attr.name).toLowerCase())
+      // const coordsFlatmap = flatmap(o.geometry.paths)
+      // const polyline = encode(coordsFlatmap)
+      return attr.name // { ...attr, polyline }
     })
 
   return obj

@@ -1,4 +1,7 @@
-const Reg = text => RegExp(text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&'))
+const Reg = text => {
+  text = text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
+  return RegExp(text)
+}
 
 /**
  * Finds words in string and cleans them
@@ -6,10 +9,10 @@ const Reg = text => RegExp(text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&'))
  * @param {object} map The casing map for words
  */
 const brmap = (string, map) => {
-  const phrase = string.replace(/_/gi, ' ')
+  let phrase = string.replace(/_/gi, ' ')
 
   for (let key in map) {
-    phrase.replace(Reg(key), map[key])
+    phrase = phrase.replace(Reg(key), map[key])
   }
 
   return phrase

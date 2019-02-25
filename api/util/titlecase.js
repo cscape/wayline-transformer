@@ -5,7 +5,7 @@ const other = ['en', 'as', 'vs.', 'v[.]?']
 const apsmall = '(' + (apprepositions.concat(articles).concat(conjunctions).concat(other)).join('|') + ')'
 const punct = "([!\"#$%&'()*+,./:;<=>?@[\\\\\\]^_`{|}~-]*)"
 
-const lower = word => word.toLowerCase()
+const lower = word => word.length > 3 ? word.toLowerCase() : word
 
 const upper = word => {
   const padFront = word.search(/\S|$/)
