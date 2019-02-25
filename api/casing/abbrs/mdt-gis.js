@@ -1,0 +1,20 @@
+module.exports = str => require('./_brmap')(str, {
+  'DOLPH MALL': 'Dolphin Mall',
+  'KEND.VIA': 'Kendall via',
+  'MDC KEND.': 'Miami Dade College (Kendall)',
+  'MDC HOMESTEAD': 'Miami Dade College (Homestead)',
+  'BISC BLVD': 'Biscayne Blvd',
+  'MIA STATION': 'Airport Station',
+  'CHILDREN HOSP': 'Nicklaus Children’s Hospital',
+  'HIALEAH GRDNS': 'Hialeah Gardens',
+  'DGLS RD': 'Douglas Road',
+  'OPALOCKA': 'Opa-Locka',
+  'S.DADE': 'South Dade',
+  'GVT CTR': 'Government Center',
+  'DADELAND SO': 'Dadeland South',
+  'FLA CITY': 'Flagler City',
+  'SO.MIAMI': 'South Miami',
+  'MIA.SPGS': 'Miami Springs',
+  'FLA.CITY': 'Flagler City',
+  'MIAMI GRDNS': 'Miami Gardens'
+})
