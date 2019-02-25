@@ -5,6 +5,7 @@ module.exports = {
   },
   'ETATransit': {
     'Alerts': require('./api/clean/ETATransit/Alerts.js'),
+    'Routes': require('./api/clean/ETATransit/Routes.js'),
     'Vehicles': require('./api/clean/ETATransit/Vehicles.js')
   },
   'MiamiDadeTransit': {
@@ -21,6 +22,7 @@ module.exports = {
   },
   'utils': {
     'colors': require('./api/util/colors.js'),
+    'polyline': require('./api/util/polyline.js'),
     'xml2json': require('./api/util/xml2json.js')
   }
 }
