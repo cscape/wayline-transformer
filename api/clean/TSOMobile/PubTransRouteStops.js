@@ -8,6 +8,11 @@ const cleanProps = require('../../casing/tso')
 const FormatArray = jsonArr => {
   const arr = jsonArr[0] // arr[1] contains realtime bus data, not needed
     .map(i => { delete i.Icon; i.stop_id = i.ID; delete i.ID; return i })
+    .map(o => {
+      o.Latitude = Number(o.Latitude)
+      o.Longitude = Number(o.Longitude)
+      return o
+    })
     .map(i => cleanProps.object(i))
 
   return arr
