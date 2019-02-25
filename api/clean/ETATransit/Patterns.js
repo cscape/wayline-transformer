@@ -15,7 +15,6 @@ const FormatObject = jsonObj => {
     .get_patterns
     .map(o => {
       o.color = colors.hexToRgb(o.color)
-      o.route_name = (o.routeNames.length > 0 ? o.routeNames[0] : '')
       removeProps.forEach(a => delete o[a])
       return o
     })
