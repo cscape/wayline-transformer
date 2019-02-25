@@ -13,6 +13,9 @@ const FormatArray = jsonArr => {
       name: o.ShortName
     }))
     .map(o => {
+      o.Lat = Number(o.Lat)
+      o.Lng = Number(o.Lng)
+      o.bearing = Number(o.Hea)
       delete o.AntibunchingCmd; delete o.Occupation
       delete o.RealStopID; delete o.SquareID
       delete o.StopA; delete o.StopB
