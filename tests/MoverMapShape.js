@@ -13,5 +13,5 @@ axios.get(`${TransitXMLFeed}MoverMapShape`, {
   const jsonData = xml2json(response.data)
   const shapes = cleaner(jsonData)
 
-  console.log(shapes)
+  console.log(JSON.stringify(shapes))
 })
