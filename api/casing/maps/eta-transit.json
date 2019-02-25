@@ -12,5 +12,7 @@
   "receiveTime": "timestamp",
   "announcements": "alerts",
   "encLine": "polyline",
-  "length": "miles"
+  "length": "miles",
+  "stoplocdesc": "description",
+  "stopid": "stop_id"
 }
