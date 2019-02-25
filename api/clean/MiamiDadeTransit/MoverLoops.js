@@ -5,7 +5,7 @@ const cleanProps = require('../../casing/movers')
  * @param {{RecordSet}} jsonObj JSON object after converting the response from XML
  * @returns {string[]} An array of Loop IDs as strings
  */
-const MoverMapShapeLoops = (jsonObj) => {
+const FormatObject = jsonObj => {
   const { RecordSet } = jsonObj
   const noRecords = RecordSet.Record == null ||
     RecordSet === '' ||
@@ -29,4 +29,4 @@ const MoverMapShapeLoops = (jsonObj) => {
   return loopIDs
 }
 
-module.exports = MoverMapShapeLoops
+module.exports = FormatObject

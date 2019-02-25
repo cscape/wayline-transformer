@@ -5,7 +5,7 @@ const { encode } = require('../../util/polyline')
  * Cleans the MoverMapShape response
  * @param {{RecordSet}} jsonObj JSON object after converting the response from XML
  */
-const MoverMapShape = (jsonObj) => {
+const FormatObject = jsonObj => {
   const { RecordSet } = jsonObj
   const noRecords = RecordSet.Record == null ||
     RecordSet === '' ||
@@ -41,4 +41,4 @@ const MoverMapShape = (jsonObj) => {
   return loops
 }
 
-module.exports = MoverMapShape
+module.exports = FormatObject

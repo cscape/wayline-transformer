@@ -68,7 +68,7 @@ const MoverTrackerTimes = (moverStop) => {
  * Cleans the MoverTracker response
  * @param {{RecordSet}} jsonObj JSON object after converting the response from XML
  */
-const MoverTracker = (jsonObj) => {
+const FormatObject = jsonObj => {
   const { RecordSet } = jsonObj
   const noMovers = RecordSet.Record == null ||
     RecordSet === '' ||
@@ -134,4 +134,4 @@ const MoverTracker = (jsonObj) => {
   return moverLoops
 }
 
-module.exports = MoverTracker
+module.exports = FormatObject
