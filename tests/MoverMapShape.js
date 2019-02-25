@@ -7,7 +7,7 @@ const TransitXMLFeed = WaylineConfig.basefeeds.MiamiDadeTransit
 
 axios.get(`${TransitXMLFeed}MoverMapShape`, {
   params: {
-    LoopID: 'OMN'
+    LoopID: ''
   }
 }).then(function (response) {
   const jsonData = xml2json(response.data)
