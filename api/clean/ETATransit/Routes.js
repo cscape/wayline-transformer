@@ -11,7 +11,7 @@ const removeProps = [
  * @param {{get_vehicles: []}} jsonObj ETA Transit response JSON object
  * @returns {{}[]} An array of service alert objects
  */
-const FormatRoutes = jsonObj => {
+const FormatObject = jsonObj => {
   const obj = jsonObj
     .get_routes
     .map(o => {
@@ -24,4 +24,4 @@ const FormatRoutes = jsonObj => {
   return obj
 }
 
-module.exports = FormatRoutes
+module.exports = FormatObject
