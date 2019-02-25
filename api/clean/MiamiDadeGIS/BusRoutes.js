@@ -1,6 +1,6 @@
-const cleanProps = require('../../casing/eta-transit')
+const cleanProps = require('../../casing/mdt-gis')
 const flatmap = require('../../util/flatmap')
-const encode = require('../../util/polyline')
+const { encode } = require('../../util/polyline')
 
 /**
  * Cleans the BusRoutes_gdb response from the MDT-GIS FeatureServer
