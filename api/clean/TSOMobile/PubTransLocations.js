@@ -5,7 +5,7 @@ const cleanProps = require('../../casing/tso')
  * @param {{}[]} jsonArr JSON array after converting the parsed response
  * @returns {{}[]} An array of locations /bus objects
  */
-const PubTransLocations = jsonArr => {
+const FormatArray = jsonArr => {
   const arr = jsonArr
     .map(o => ({
       ...o,
@@ -24,4 +24,4 @@ const PubTransLocations = jsonArr => {
   return arr
 }
 
-module.exports = PubTransLocations
+module.exports = FormatArray

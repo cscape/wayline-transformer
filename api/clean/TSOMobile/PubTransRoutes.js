@@ -6,7 +6,7 @@ const colors = require('../../util/colors')
  * @param {{ID: string, LineColor: string, Name: string, RoutePath: string, StopIcon: string, UnitIcon: string}[]} jsonArr JSON array after converting the parsed response
  * @returns {{}[]} An array of route objects
  */
-const PubTransRoutes = (jsonArr) => {
+const FormatArray = jsonArr => {
   const arr = jsonArr
     .map(o => { delete o.UnitIcon; delete o.StopIcon; return o })
     .map(o => ({
@@ -18,4 +18,4 @@ const PubTransRoutes = (jsonArr) => {
   return arr
 }
 
-module.exports = PubTransRoutes
+module.exports = FormatArray
