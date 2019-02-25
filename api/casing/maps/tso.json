@@ -8,7 +8,7 @@
   "Type": "type",
   "News": "news",
   "Latitude": "lat",
-  "Longitude": "long",
+  "Longitude": "lng",
   "RouteID": "route_id",
   "StopNumber": "stop_number",
   "Distance": "distance",
