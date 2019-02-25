@@ -1,5 +1,6 @@
 {
   "routeID": "route_id",
+  "rid": "route_id",
   "patternID": "pattern_id",
   "equipmentID": "id",
   "lat": "lat",
