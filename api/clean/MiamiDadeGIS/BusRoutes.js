@@ -15,9 +15,9 @@ const FormatObj = jsonObj => {
     .map(o => {
       const attr = cleanProps.object(o.attributes)
       attr.name = TitleCase(deAbbr(attr.name).toLowerCase())
-      // const coordsFlatmap = flatmap(o.geometry.paths)
-      // const polyline = encode(coordsFlatmap)
-      return attr.name // { ...attr, polyline }
+      const coordsFlatmap = flatmap(o.geometry.paths)
+      const polyline = encode(coordsFlatmap)
+      return { ...attr, polyline }
     })
 
   return obj
