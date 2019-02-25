@@ -1,1 +1,21 @@
-module.exports = require('./_fmap')('tso')
+module.exports = require('./_fmap')({
+  'ID': 'id',
+  'Name': 'name',
+  'LineColor': 'color',
+  'RoutePath': 'path',
+  'StopIcon': 'stop_icon',
+  'UnitIcon': 'unit_icon',
+  'Type': 'type',
+  'News': 'news',
+  'Latitude': 'lat',
+  'Longitude': 'lng',
+  'RouteID': 'route_id',
+  'StopNumber': 'stop_number',
+  'Distance': 'distance',
+  'Description': 'description',
+  'Hea': 'bearing',
+  'Lat': 'lat',
+  'Lng': 'lng',
+  'Street': 'street',
+  'RouteName': 'name'
+})

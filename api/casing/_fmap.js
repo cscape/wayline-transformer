@@ -1,6 +1,4 @@
-const fmap = mapName => {
-  const map = require(`./maps/${mapName}.json`)
-
+const fmap = map => {
   /**
    * Converts single strings
    * @param {string} str Single property value
