@@ -8,5 +8,6 @@
   "vehicleType": "vehicle_type",
   "trainID": "train_id",
   "receiveTime": "timestamp",
-  "announcements": "alerts"
+  "announcements": "alerts",
+  "encLine": "polyline"
 }
