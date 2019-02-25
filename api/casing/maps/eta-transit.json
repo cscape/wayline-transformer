@@ -6,6 +6,7 @@
   "long": "lng",
   "scheduleNumber": "schedule_id",
   "vehicleType": "vehicle_type",
+  "vType": "vehicle_type",
   "trainID": "train_id",
   "receiveTime": "timestamp",
   "announcements": "alerts",
