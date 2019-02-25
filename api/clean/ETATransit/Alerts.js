@@ -2,7 +2,7 @@ const cleanProps = require('../../casing/eta-transit')
 
 /**
  * Cleans the service.get_service_announcements response
- * @param {{get_vehicles: []}} jsonObj ETA Transit response JSON object
+ * @param {{get_service_announcements: []}} jsonObj ETA Transit response JSON object
  * @returns {{}[]} An array of service alert objects
  */
 const FormatAlerts = jsonObj => {

@@ -7,9 +7,9 @@ const removeProps = [
 ]
 
 /**
- * Cleans the service.get_service_announcements response
- * @param {{get_vehicles: []}} jsonObj ETA Transit response JSON object
- * @returns {{}[]} An array of service alert objects
+ * Cleans the service.get_routes response
+ * @param {{get_routes: []}} jsonObj ETA Transit response JSON object
+ * @returns {{}[]} An array of route objects
  */
 const FormatObject = jsonObj => {
   const obj = jsonObj
