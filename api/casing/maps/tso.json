@@ -15,5 +15,7 @@
   "Description": "description",
   "Hea": "bearing",
   "Lat": "lat",
-  "Lng": "lng"
+  "Lng": "lng",
+  "Street": "street",
+  "RouteName": "name"
 }
