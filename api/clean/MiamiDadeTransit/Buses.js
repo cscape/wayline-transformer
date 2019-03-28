@@ -1,5 +1,6 @@
 const cleanProps = require('../../casing/buses')
 const { toTimestamp } = require('../../util/time-reformat')
+const toBearing = require('../../util/convert-direction')
 
 /**
  * Cleans the Buses (realtime) response
@@ -23,6 +24,8 @@ const FormatObject = jsonObj => {
   const busArray = buses.map(o => {
     delete o.Service
     delete o.ServiceName
+    o.bearing = toBearing(o.Direction)
+    delete o.Direction
     o = cleanProps.object(o)
     o.timestamp = toTimestamp(o.timestamp)
     return o
