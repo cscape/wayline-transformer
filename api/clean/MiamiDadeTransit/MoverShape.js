@@ -1,4 +1,4 @@
-const cleanProps = require('../../casing/movers')
+const cleanProps = require('../../casing/mdt-movers')
 const { encode } = require('../../util/polyline')
 
 /**

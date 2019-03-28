@@ -1,4 +1,4 @@
-const cleanProps = require('../../casing/buses')
+const cleanProps = require('../../casing/mdt-buses')
 const { toTimestamp } = require('../../util/time-reformat')
 const toBearing = require('../../util/convert-direction')
 

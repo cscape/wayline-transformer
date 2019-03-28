@@ -1,4 +1,4 @@
-const cleanProps = require('../../casing/movers')
+const cleanProps = require('../../casing/mdt-movers')
 
 /**
  * Cleans the MoverMapShapeLoops response
