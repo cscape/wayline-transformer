@@ -45,4 +45,6 @@ const trueStamp = secs => {
   return realTime * 1000
 }
 
-module.exports = { reformat, trueStamp }
+const toTimestamp = timeString => trueStamp(reformat(timeString))
+
+module.exports = { reformat, trueStamp, toTimestamp }
