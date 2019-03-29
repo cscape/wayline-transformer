@@ -27,6 +27,7 @@ const DirectionMapper = d => {
     direction = direction.replace(key, aliasMap[key])
   })
   direction = direction.toUpperCase()
+  direction = direction.replace(/B/gi, '') // remove all 'b'/bound instances
   if (directionMap[direction] == null) throw new Error(`${d} is not a valid direction name!`)
   const numer = directionMap[direction]
   return numer
