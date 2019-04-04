@@ -27,6 +27,7 @@ const FormatObject = jsonObj => {
     o.bearing = toBearing(o.Direction)
     delete o.Direction
     o = cleanProps.object(o)
+    o.name = String(o.name)
     o.timestamp = toTimestamp(o.timestamp)
     return o
   })
