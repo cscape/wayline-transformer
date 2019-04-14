@@ -1,8 +1,8 @@
 module.exports = require('./_fmap')({
   'BusName': 'name', // STRING that identifies bus "serial number", see [1]
   'BusID': 'id', // unique ID for this bus
-  'Direction': 'direction', // Only these: N, NE, E, SE, S, SW, W, NW
-  'vehDirection': 'direction',
+  'Direction': 'bearing', // Only these: N, NE, E, SE, S, SW, W, NW
+  'vehDirection': 'bearing',
   'RouteID': 'route_id',
   'TripID': 'trip_id',
   'ServiceDirection': 'service_direction',
