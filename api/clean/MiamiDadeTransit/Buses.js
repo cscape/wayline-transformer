@@ -24,8 +24,8 @@ const FormatObject = jsonObj => {
   const busArray = buses.map(o => {
     delete o.Service
     delete o.ServiceName
-    o.bearing = toBearing(o.Direction)
-    delete o.Direction
+    let a = o.bearing
+    o.bearing = toBearing(a)
     o = cleanProps.object(o)
     o.timestamp = toTimestamp(o.timestamp)
     return o
