@@ -16,6 +16,7 @@ module.exports = {
   },
   'MiamiDadeTransit': {
     'Buses': require('./api/clean/MiamiDadeTransit/Buses.js'),
+    'BusesVerbose': require('./api/clean/MiamiDadeTransit/BusesVerbose.js'),
     'MoverLoops': require('./api/clean/MiamiDadeTransit/MoverLoops.js'),
     'MoverShape': require('./api/clean/MiamiDadeTransit/MoverShape.js'),
     'MoverTracker': require('./api/clean/MiamiDadeTransit/MoverTracker.js'),

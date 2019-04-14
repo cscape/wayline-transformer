@@ -1,6 +1,6 @@
 module.exports = require('./_fmap')({
-  'BusName': 'name',
-  'BusID': 'id',
+  'BusName': 'name', // STRING that identifies bus "serial number", see [1]
+  'BusID': 'id', // unique ID for this bus
   'Direction': 'direction',
   'RouteID': 'route_id',
   'TripID': 'trip_id',
@@ -8,5 +8,21 @@ module.exports = require('./_fmap')({
   'TripHeadsign': 'headsign',
   'LocationUpdated': 'timestamp',
   'Latitude': 'lat',
-  'Longitude': 'lng'
+  'Longitude': 'lng',
+  'vehDirection': 'direction',
+  'OnTime': 'delay',
+  'LocationUpdatedDiffBasic': 'timestamp_offset',
+  'vehSpeed': 'speed',
+  'ShapeID': 'shape_id',
+  'Route': 'route_id',
+  'RouteAlias': 'name'
 })
+
+/* [1] Each bus has a serial ID, which represents when the bus
+ * was purchased and which physical vehicle it is. The first 1 or 2
+ * digits represents the year: "19021" (2019), "04174" (2004), "15508" (2015),
+ * "18176" (2018), "06106" (2006), and so on.
+ *
+ * EXCEPTION: Some buses may have a non-numerical ID like "LSF463", I don't
+ * know what these mean so be sure to account for this
+ */
