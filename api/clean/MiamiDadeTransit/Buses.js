@@ -27,6 +27,7 @@ const FormatObject = jsonObj => {
     let a = o.bearing
     o.bearing = toBearing(a)
     o = cleanProps.object(o)
+    o.name = String(o.name)
     o.timestamp = toTimestamp(o.timestamp)
     return o
   })
