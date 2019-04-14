@@ -12,7 +12,7 @@ const FormatObject = jsonObj => {
   const noRecords = Buses.Bus == null ||
     Buses === '' ||
     typeof Buses === 'string' ||
-    typeof Buses.Record !== 'object'
+    typeof Buses.Bus !== 'object'
 
   // No records
   if (noRecords) return []
@@ -31,6 +31,7 @@ const FormatObject = jsonObj => {
   const busArray = buses.map(o => {
     p2Delete.forEach(i => delete o[i])
     o = cleanProps.object(o)
+    o.name = String(o.name)
     o.bearing = toBearing(o.bearing)
     o.timestamp = toTimestamp(o.timestamp)
     return o
