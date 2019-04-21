@@ -17,8 +17,7 @@ const FormatArray = jsonArr => {
       o.Lng = Number(o.Lng)
       o.bearing = Number(o.Hea)
       delete o.AntibunchingCmd; delete o.Occupation
-      delete o.RealStopID; delete o.SquareID
-      delete o.StopA; delete o.StopB
+      delete o.StopA; delete o.SquareID
       delete o.Tim; delete o.ShortName
       return o
     })

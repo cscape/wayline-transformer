@@ -17,5 +17,7 @@ module.exports = require('./_fmap')({
   'Lat': 'lat',
   'Lng': 'lng',
   'Street': 'street',
-  'RouteName': 'name'
+  'RouteName': 'route_name',
+  'RealStopID': 'at_stop',
+  'StopB': 'next_stop'
 })
