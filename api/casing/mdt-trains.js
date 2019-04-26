@@ -6,5 +6,7 @@ module.exports = require('./_fmap')({
   'LocationUpdated': 'timestamp',
   'Latitude': 'lat',
   'Cars': 'cars',
-  'Longitude': 'lng'
+  'Longitude': 'lng',
+  'vehDirection': 'bearing',
+  'vehSpeed': 'speed'
 })
