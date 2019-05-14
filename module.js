@@ -35,6 +35,7 @@ module.exports = {
     'colors': require('./api/util/colors.js'),
     'convertDirection': require('./api/util/convert-direction.js'),
     'flatmap': require('./api/util/flatmap.js'),
+    'makeTimestamp': require('./api/util/make-timestamp.js'),
     'polyline': require('./api/util/polyline.js'),
     'timeReformat': require('./api/util/time-reformat.js'),
     'titlecase': require('./api/util/titlecase.js'),
