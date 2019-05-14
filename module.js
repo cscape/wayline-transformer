@@ -33,10 +33,10 @@ module.exports = {
   },
   'utils': {
     'colors': require('./api/util/colors.js'),
-    'convert-direction': require('./api/util/convert-direction.js'),
+    'convertDirection': require('./api/util/convert-direction.js'),
     'flatmap': require('./api/util/flatmap.js'),
     'polyline': require('./api/util/polyline.js'),
-    'time-reformat': require('./api/util/time-reformat.js'),
+    'timeReformat': require('./api/util/time-reformat.js'),
     'titlecase': require('./api/util/titlecase.js'),
     'xml2json': require('./api/util/xml2json.js')
   }

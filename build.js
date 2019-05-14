@@ -31,7 +31,14 @@ modjs.on('open', () => {
     .filter(f => f.indexOf('.js') === f.length - 3) // only files with .js extension
     .map(f => f.slice(0, f.length - 3))
     .forEach((f, k) => {
-      modjs.write(`${k === 0 ? '\n' : ',\n'}    '${f}': require('./api/util/${f}.js')`)
+      const mn = f
+        .split('-')
+        .map((a, i) => i > 0 // exclude first (for camelCase)
+          ? a[0].toUpperCase() + a.substring(1) // up the 1st char & combine
+          : a
+        )
+        .join('')
+      modjs.write(`${k === 0 ? '\n' : ',\n'}    '${mn}': require('./api/util/${f}.js')`)
     })
   modjs.write('\n  }')
   modjs.write('\n}\n')
