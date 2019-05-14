@@ -20,7 +20,7 @@ const reformat = hourTime => {
 }
 
 /**
- * Converts seconds to real Unix timestamp
+ * [DO-NOT-USE] Converts seconds to real Unix timestamp
  * @param {number} secs Number of seconds elapsed since start of day
  * @returns {number} Numerical Unix timestamp
  */
@@ -45,6 +45,18 @@ const trueStamp = secs => {
   return realTime * 1000
 }
 
+/** DO NOT USE!! DEPRECATED
+ * @param {string} timeString
+ */
 const toTimestamp = timeString => trueStamp(reformat(timeString))
 
-module.exports = { reformat, trueStamp, toTimestamp }
+/**
+ * Timestamp from elapsed seconds
+ * @param {number} seconds Elapsed seconds
+ * @param {number?} unixTimestamp Initial timestamp to subtract seconds from
+ */
+const elapsedNow = (seconds, unixTimestamp = Date.now()) => {
+  return unixTimestamp - (seconds * 1000)
+}
+
+module.exports = { reformat, trueStamp, toTimestamp, elapsedNow }
