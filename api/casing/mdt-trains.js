@@ -8,5 +8,6 @@ module.exports = require('./_fmap')({
   'Cars': 'cars',
   'Longitude': 'lng',
   'vehDirection': 'bearing',
-  'vehSpeed': 'speed'
+  'vehSpeed': 'speed',
+  'LocationUpdatedDiffBasic': 'timestamp_offset' // in seconds
 })
