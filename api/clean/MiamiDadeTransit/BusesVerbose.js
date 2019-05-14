@@ -22,7 +22,7 @@ const FormatObject = jsonObj => {
   else buses = Buses.Bus
 
   const p2Delete = [
-    'ServiceName', 'RouteAlias', 'RouteAliasShort', 'RouteColor', 'ShapeID',
+    'ServiceName', 'RouteAlias', 'RouteColor', 'ShapeID',
     'ServiceDirection', 'Service', 'ServiceName', 'NextTripID', 'NextTripShapeID',
     'NextTripRoute', 'NextTripRouteAlias', 'NextTripRouteColor', 'NextTripServiceDirection',
     'NextTripService', 'NextTripHeadsign', 'LocationUpdatedDiff'

@@ -15,7 +15,8 @@ module.exports = require('./_fmap')({
   'vehSpeed': 'speed',
   'ShapeID': 'shape_id',
   'Route': 'route_id',
-  'RouteAlias': 'route_name'
+  'RouteAlias': 'route_name',
+  'RouteAliasShort': 'route_shortname'
 })
 
 /* [1] Each bus has a serial ID, which represents when the bus
