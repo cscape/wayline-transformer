@@ -1,6 +1,6 @@
 {
   "name": "@wayline/transformer",
-  "version": "1.5.11",
+  "version": "1.5.12",
   "description": "Simplifies messy, poorly structured data",
   "main": "module.js",
   "scripts": {
