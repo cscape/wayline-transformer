@@ -1,5 +1,5 @@
 const cleanProps = require('../../casing/mdt-buses')
-const { toTimestamp } = require('../../util/time-reformat')
+const { elapsedNow } = require('../../util/time-reformat')
 const toBearing = require('../../util/convert-direction')
 
 /**
@@ -33,7 +33,7 @@ const FormatObject = jsonObj => {
     o = cleanProps.object(o)
     o.name = String(o.name)
     o.bearing = toBearing(o.bearing)
-    o.timestamp = toTimestamp(o.timestamp)
+    o.timestamp = elapsedNow(o.timestamp_offset)
     return o
   })
 
