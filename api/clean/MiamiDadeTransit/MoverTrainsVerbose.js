@@ -21,7 +21,7 @@ const FormatObject = jsonObj => {
     o = cleanProps.object(o)
     o.bearing = toBearing(o.bearing)
     o.timestamp = elapsedNow(o.timestamp_offset)
-    o.cars = o.cars.split('-').map(a => Number(a))
+    o.cars = String(o.cars).split('-').map(a => Number(a))
     return o
   })
 
