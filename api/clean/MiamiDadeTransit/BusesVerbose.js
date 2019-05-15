@@ -1,6 +1,7 @@
 const cleanProps = require('../../casing/mdt-buses')
 const { elapsedNow } = require('../../util/time-reformat')
 const toBearing = require('../../util/convert-direction')
+const cleanifyJSON = require('../../util/mdt-clean-response')
 
 /**
  * VERBOSE - Cleans the Buses (realtime) response
@@ -8,18 +9,7 @@ const toBearing = require('../../util/convert-direction')
  * @returns {string[]} An array of buses as objects
  */
 const FormatObject = jsonObj => {
-  const { Buses } = jsonObj
-  const noRecords = Buses.Bus == null ||
-    Buses === '' ||
-    typeof Buses === 'string' ||
-    typeof Buses.Bus !== 'object'
-
-  // No records
-  if (noRecords) return []
-
-  let buses = []
-  if (!Array.isArray(Buses.Bus)) buses.push(Buses.Bus)
-  else buses = Buses.Bus
+  const buses = cleanifyJSON('Buses', 'Bus', jsonObj)
 
   const p2Delete = [
     'ServiceName', 'RouteAlias', 'RouteColor', 'ShapeID',
