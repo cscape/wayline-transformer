@@ -1,5 +1,4 @@
 module.exports = require('./_fmap')({
-  'Direction': 'direction',
   'LoopID': 'loop_id',
   'LoopName': 'loop_name',
   'TrainID': 'id',
