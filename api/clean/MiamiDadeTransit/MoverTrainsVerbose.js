@@ -1,4 +1,4 @@
-const cleanProps = require('../../casing/mdt-movers')
+const cleanProps = require('../../casing/mdt-movertrains')
 const { elapsedNow } = require('../../util/time-reformat')
 const toBearing = require('../../util/convert-direction')
 const cleanifyJSON = require('../../util/mdt-clean-response')
