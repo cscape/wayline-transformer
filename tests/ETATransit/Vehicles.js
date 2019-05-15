@@ -2,7 +2,7 @@ const axios = require('axios')
 const cleaner = require('../../api/clean/ETATransit/Vehicles')
 const WaylineConfig = require('@wayline/config')
 
-const TriRailETATransit = WaylineConfig.basefeeds.TriRailETA
+const TriRailETATransit = WaylineConfig.basefeeds.CoralGablesETA
 
 axios.get(TriRailETATransit, {
   params: {

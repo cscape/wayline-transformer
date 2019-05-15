@@ -15,8 +15,8 @@ const removeProps = [
 const FormatObject = jsonObj => {
   const obj = jsonObj
     .get_vehicles
+    .filter(o => Boolean(o.inService))
     .map(o => {
-      o.running = Boolean(o.inService)
       removeProps.forEach(a => delete o[a])
       return o
     })
