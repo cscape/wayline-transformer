@@ -20,6 +20,7 @@ module.exports = {
     'MoverLoops': require('./api/clean/MiamiDadeTransit/MoverLoops.js'),
     'MoverShape': require('./api/clean/MiamiDadeTransit/MoverShape.js'),
     'MoverTracker': require('./api/clean/MiamiDadeTransit/MoverTracker.js'),
+    'MoverTrainsVerbose': require('./api/clean/MiamiDadeTransit/MoverTrainsVerbose.js'),
     'Trains': require('./api/clean/MiamiDadeTransit/Trains.js'),
     'TrainsVerbose': require('./api/clean/MiamiDadeTransit/TrainsVerbose.js')
   },
@@ -36,6 +37,7 @@ module.exports = {
     'convertDirection': require('./api/util/convert-direction.js'),
     'flatmap': require('./api/util/flatmap.js'),
     'makeTimestamp': require('./api/util/make-timestamp.js'),
+    'mdtCleanResponse': require('./api/util/mdt-clean-response.js'),
     'polyline': require('./api/util/polyline.js'),
     'timeReformat': require('./api/util/time-reformat.js'),
     'titlecase': require('./api/util/titlecase.js'),
