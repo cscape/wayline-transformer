@@ -10,7 +10,7 @@ module.exports = require('./_fmap')({
   'vType': 'vehicle_type',
   'trainID': 'train_id',
   'receiveTime': 'timestamp',
-  'tripId': 'trip_id',
+  'tripID': 'trip_id',
   'announcements': 'alerts',
   'encLine': 'polyline',
   'length': 'miles',
