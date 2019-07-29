@@ -1,8 +1,8 @@
 const cleanProps = require('../../casing/eta-transit')
 
 const removeProps = [
-  'load', 'capacity', 'blockID', 'nextStopID',
-  'nextStopETA', 'nextStopETA', 'nextPatternStopID',
+  'load', 'capacity', 'blockID',
+  'nextStopETA',
   'minutesToNextStops', 'deadHead', 'inService', 'aID',
   'onSchedule'
 ]
